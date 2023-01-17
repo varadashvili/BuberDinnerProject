@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuberDinner.Api", "BuberDinner.Api\BuberDinner.Api.csproj", "{673A0A8E-BE32-498F-8FEF-35A91CAED675}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuberDinner.Application", "BuberDinner.Application\BuberDinner.Application.csproj", "{AEBA1717-8F88-4DE8-9A46-A8877C240607}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuberDinner.Contracts", "BuberDinner.Contracts\BuberDinner.Contracts.csproj", "{89E6C70F-D01C-431F-855E-70BE1997B229}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuberDinner.Domain", "BuberDinner.Domain\BuberDinner.Domain.csproj", "{33C3C206-C24D-4257-AC5D-4FACDFDBA102}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuberDinner.Infrastructure", "BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj", "{3ADEAA8E-0D47-48ED-87FE-F2DBB7099933}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_doc", "_doc", "{1F61993A-00AD-4941-9F7B-8FD84B613C2B}"
+	ProjectSection(SolutionItems) = preProject
+		_doc\Api.md = _doc\Api.md
+		_doc\clean architecture.png = _doc\clean architecture.png
+		_doc\Domain Models.md = _doc\Domain Models.md
+		_doc\projects.png = _doc\projects.png
+		_doc\RFC Specification.png = _doc\RFC Specification.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_requests", "_requests", "{EB3C8713-0DD6-446A-86A5-AB7372DDD791}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{9DE77F4D-4D7E-4563-AE19-11193073D676}"
+	ProjectSection(SolutionItems) = preProject
+		_requests\Authentication\Login.http = _requests\Authentication\Login.http
+		_requests\Authentication\Register.http = _requests\Authentication\Register.http
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{673A0A8E-BE32-498F-8FEF-35A91CAED675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{673A0A8E-BE32-498F-8FEF-35A91CAED675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{673A0A8E-BE32-498F-8FEF-35A91CAED675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{673A0A8E-BE32-498F-8FEF-35A91CAED675}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEBA1717-8F88-4DE8-9A46-A8877C240607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEBA1717-8F88-4DE8-9A46-A8877C240607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEBA1717-8F88-4DE8-9A46-A8877C240607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEBA1717-8F88-4DE8-9A46-A8877C240607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89E6C70F-D01C-431F-855E-70BE1997B229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89E6C70F-D01C-431F-855E-70BE1997B229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89E6C70F-D01C-431F-855E-70BE1997B229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89E6C70F-D01C-431F-855E-70BE1997B229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33C3C206-C24D-4257-AC5D-4FACDFDBA102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33C3C206-C24D-4257-AC5D-4FACDFDBA102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33C3C206-C24D-4257-AC5D-4FACDFDBA102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33C3C206-C24D-4257-AC5D-4FACDFDBA102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ADEAA8E-0D47-48ED-87FE-F2DBB7099933}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ADEAA8E-0D47-48ED-87FE-F2DBB7099933}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ADEAA8E-0D47-48ED-87FE-F2DBB7099933}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ADEAA8E-0D47-48ED-87FE-F2DBB7099933}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9DE77F4D-4D7E-4563-AE19-11193073D676} = {EB3C8713-0DD6-446A-86A5-AB7372DDD791}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F712612B-34C4-44D1-A320-5CCBD997838C}
+	EndGlobalSection
+EndGlobal
