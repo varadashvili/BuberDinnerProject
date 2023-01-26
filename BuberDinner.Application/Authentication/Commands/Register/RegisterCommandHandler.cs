@@ -1,25 +1,27 @@
+﻿using BuberDinner.Application.Authentication.Common;
 using BuberDinner.Application.Common.Interfaces.Authentication;
 using BuberDinner.Application.Common.Interfaces.Persistence;
-using BuberDinner.Application.Services.Authentication.Common;
 using BuberDinner.Domain.Entities;
 
-namespace BuberDinner.Application.Services.Authentication.Commands;
+using MediatR;
 
-public class AuthenticationCommandService : IAuthenticationCommandService
+namespace BuberDinner.Application.Authentication.Commands.Register;
+
+public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ErrorOr<AuthenticationResult>>
 {
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
     private readonly IUserRepository _userRepository;
 
-    public AuthenticationCommandService(IJwtTokenGenerator jwtTokenGenerator, IUserRepository userRepository)
+    public RegisterCommandHandler(IUserRepository userRepository, IJwtTokenGenerator jwtTokenGenerator)
     {
-        _jwtTokenGenerator = jwtTokenGenerator;
         _userRepository = userRepository;
+        _jwtTokenGenerator = jwtTokenGenerator;
     }
 
-    public ErrorOr<AuthenticationResult> Register(string firstName, string lastName, string email, string password)
+    public async Task<ErrorOr<AuthenticationResult>> Handle(RegisterCommand command, CancellationToken cancellationToken)
     {
         // validate the user does not exist
-        var user = _userRepository.GetUserByEmail(email);
+        var user = _userRepository.GetUserByEmail(command.Email);
         if (user is not null)
         {
             return Errors.User.DuplicateEmail;
@@ -28,10 +30,10 @@ public class AuthenticationCommandService : IAuthenticationCommandService
         // Create user (generate unique ID) & persost to DB
         user = new User
         {
-            FirstName = firstName,
-            LastName = lastName,
-            Email = email,
-            Password = password
+            FirstName = command.FirstName,
+            LastName = command.LastName,
+            Email = command.Email,
+            Password = command.Password
         };
 
         _userRepository.Add(user);
