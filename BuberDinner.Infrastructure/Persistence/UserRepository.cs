@@ -11,7 +11,7 @@ public class UserRepository : IUserRepository
     {
         _users.Add(user);
     }
-    public User GetUserByEmail(string email)
+    public User? GetUserByEmail(string email)
     {
         var user = _users.SingleOrDefault(u => u.Email == email);
 
